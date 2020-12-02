@@ -14,7 +14,10 @@ function saludar(nombre, apellido) {
 }
 saludar(nombre, apellido);
 
+if (edad < 50)
 console.log("En el 2050 tendras " + suma + " " + "anios de vida");
+else  
+console.log("En el 2050 estaras mas cerca del arpa que de la guitarra");
 
 console.log(Cumpleanos);
 

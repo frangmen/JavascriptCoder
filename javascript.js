@@ -30,6 +30,6 @@ for (let i=0; i < dias.length; i++) {
   if (i == 6)
   alert("Hola " + nombre + " " + apellido + " el domingo es el dia de descanso")
 
-  if (i % 2 !== 0)
+  else if(i % 2 !== 0)
   console.log('Los dias '+dias[i]+' son pares')
 }

@@ -1,7 +1,7 @@
-/*  let nombre = prompt("Ingrese su primer nombre");
+  let nombre = prompt("Ingrese su primer nombre");
 let apellido = prompt("Ingrese su Apellido");
-let edad = parseInt(prompt("Ingrese su Edad"));  */
-/*  const suma = edad + 30;  */
+let edad = parseInt(prompt("Ingrese su Edad"));  
+  const suma = edad + 30;  
 let Dia = "27";
 let Mes = "02";
 let Anio = "1989";
@@ -25,7 +25,7 @@ console.log(Cumpleanos);
 let result = confirm("Estas seguro que quieres ingresar?");
 console.log(result);
  */
-/* 
+
 for (let i=0; i < dias.length; i++) {
   if (i == 6)
   alert("Hola " + nombre + " " + apellido + " el domingo es el dia de descanso")
@@ -33,7 +33,7 @@ for (let i=0; i < dias.length; i++) {
   else if(i % 2 !== 0)
   console.log('Los dias '+dias[i]+' son pares')
 }
- */
+
 let x = Number(prompt("Cuantas horas trabajas por dia?"))
 let y = Number(prompt("Cuantos dias trabajas por semana?"))
 let multiplicar = x * y;
@@ -44,6 +44,8 @@ function sumar (x, y) {
   console.log(`La cantidad de horas semanales que trabajas es ${x * y}`)
   return multiplicar;
 }
+
+sumar (x ,y)
 
 function promediar () {
   console.log(`${promedio} horas trabajas promedio por dia`)

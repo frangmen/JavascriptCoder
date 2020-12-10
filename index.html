@@ -1,13 +1,245 @@
 <!DOCTYPE html5>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="LadyYogaClothingCo" content="Esta es mi primer pagina web" />
+    <meta name="author" content="Francisco Garcia Mendez" />
+    <meta name="keywords" content="lady yoga clothing, fitness wellness T-Shirts, hoodies new design, ladyyoga web" />
+    <meta name="description" content="online shopping, e-commerce, yogaonline, tank-tops, tanktops, tshirts">
+    <link rel="stylesheet" href="estilosParaJS.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bangers&family=Lobster&family=Roboto:wght@100&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+    />
+    <title>Lady Yoga Clothing Co.</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
     <title>Primera Pagina Con JavaScript</title>
-</head>
-<body>
-    <h1> Bienvenido !!! </h1>
-    <script src="javascript.js"></script> 
-</body>
+  </head>
+  <body>
+    <script src="javascript.js"></script>
+    <header>
+        <div id="headerOferta">
+        <p id="promoTop">
+            ⚡💳 UP TO 50% OFF + 12 no interest monthly payments 💳⚡
+        </p>
+        </div>
+
+        <div class="container">
+        <div class="topnav">
+            <img
+            id="logo"
+            src="https://i.ibb.co/jkx1R3y/Logo-Lady-Yoga-Pagina-Coder.png">
+        
+            <h1 id="tituloPrincipal">Lady Yoga Clothing Co.</h1>
+            <form class="form-inline">
+            <input
+                class="form-control mr-md-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+            />
+            </form>
+            <div id="botonSearch">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+                Search
+            </button>
+            </div>
+        </div>
+        </div>
+    </header>
+  
+    <nav role="navigation">
+        <div id="menuToggle">
+        <input type="checkbox" />
+        <span></span>
+        <span></span>
+        <span></span>
+        <ul id="menu">
+            <li><a href="index.html">Main Page</a></li>
+            <li><a href="views\t-shirts.html">T-shirts</a></li>
+            <li><a href="views\tank-tops.html">Tank-Tops</a></li>
+            <li><a href="views\hoodies.html">Hoodies</a></li>
+            <li><a href="views\contact.html">Contact</a></li>
+        </ul>
+        </div>
+    </nav>
+
+    <div>
+        <div class="container">
+        <ul id="listaIndex" class="nav nav-tabs">
+            <li><a href="index.html">Main Page</a></li>
+            <li><a href="views\t-shirts.html">T-shirts</a></li>
+            <li><a href="views\tank-tops.html">Tank-Tops</a></li>
+            <li><a href="views\hoodies.html">Hoodies</a></li>
+            <li><a href="views\contact.html">Contact</a></li>
+        </ul>
+        </div>
+    </div>
+
+    <div id="demo" class="carousel slide" data-ride="carousel">
+        <ul class="carousel-indicators">
+        <li data-target="#demo" data-slide-to="0" class="active"></li>
+        <li data-target="#demo" data-slide-to="1"></li>
+        <li data-target="#demo" data-slide-to="2"></li>
+        </ul>
+
+        <div class="carousel-inner">
+        <div class="carousel-item active">
+            <picture>
+            <source class="borderCarousel" srcset="https://i.ibb.co/0m5wW53/1.png" media="(max-width: 415px)">
+            <source class="borderCarousel" srcset="https://i.ibb.co/Tryw7wj/facebook-cover-maker-with-a-minimal-chic-design-2084j-1884f-twitter-header.png">
+            <img src="https://i.ibb.co/Tryw7wj/facebook-cover-maker-with-a-minimal-chic-design-2084j-1884f-twitter-header.png" alt="Flowers">
+            </picture>
+        </div>
+        <div class="carousel-item">
+            <picture>
+            <source srcset="https://i.ibb.co/C5YQwhT/2.png" media="(max-width: 415px)">
+            <source srcset="https://i.ibb.co/vd88vRG/etsy-shop-banner-maker-for-a-winter-sale-1117e-twitter-header.png">
+            <img src="https://i.ibb.co/vd88vRG/etsy-shop-banner-maker-for-a-winter-sale-1117e-twitter-header.png" alt="Flowers">
+            </picture>
+        </div> 
+        <div class="carousel-item">
+            <picture>
+            <source srcset="https://i.ibb.co/yQdgPHZ/3.png" media="(max-width: 415px)">
+            <source srcset="https://i.ibb.co/pjZ3vgx/minimalist-styled-facebook-cover-maker-for-a-chic-brand-1085i-1884g-twitter-header-1.png">
+            <img src="https://i.ibb.co/pjZ3vgx/minimalist-styled-facebook-cover-maker-for-a-chic-brand-1085i-1884g-twitter-header-1.png" alt="Flowers">
+            </picture>
+        </div>
+        </div>
+
+        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#demo" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+        </a>
+    </div>
+
+    <div class="container">
+        <div class="card-deck" style="margin-left: 70px">
+        <div class="row">
+            <div class="col-md-4">
+            <div class="card" style="width: 18rem">
+                <img
+                class="card-img-top"
+                src="https://i.ibb.co/8Bmpb4q/tank-top-mockup-of-a-young-woman-posing-by-crashing-waves-at-the-beach-26785.png"
+                alt="list item 2"
+                />
+                <div class="card-body">
+                <p class="card-text">Pink Namaste Tank-Tops</p>
+                <a href="#" class="btn btn-primary">$19.99</a>
+                </div>
+            </div>
+            </div>
+            <div class="col-md-4">
+            <div class="card" style="width: 18rem">
+                <img
+                class="card-img-top"
+                src="https://i.ibb.co/tX8MbL8/5.png"
+                alt="list item 3"
+                />
+                <div class="card-body">
+                <p class="card-text">White Womens Tank-Top</p>
+                <a href="#" class="btn btn-primary">$22.99</a>
+                </div>
+            </div>
+            </div>
+            <div class="col-md-4">
+            <div class="card" style="width: 18rem">
+                <img
+                class="card-img-top"
+                img src="https://i.ibb.co/tHNX8S2/t-shirt-mockup-of-a-woman-smiling-while-her-daughter-hugs-her-32654.png"  />
+                
+                <div class="card-body">
+                <p class="card-text">Strive For Balance T-Shirts</p>
+                <a href="#" class="btn btn-primary">$22.99</a>
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+            <div class="card" style="width: 18rem">
+                <img
+                class="card-img-top"
+                src="https://i.ibb.co/Tbpxx2X/hoodie-mockup-of-a-happy-woman-walking-in-the-middle-of-the-highway-44485-r-el2.png"
+                alt="list item 1"
+                />
+                <div class="card-body">
+                <p class="card-text">
+                    Let´s Get Yogi Hoodies
+                </p>
+                <a href="#" class="btn btn-primary">$42.99</a>
+                </div>
+            </div>
+            </div>
+            <div class="col-md-4">
+            <div class="card" style="width: 18rem">
+                <img
+                class="card-img-top"
+                src="https://i.ibb.co/NnLLGg8/8.png"
+                alt="list item 6"
+                />
+                <div class="card-body">
+                <p class="card-text">Pink Shakespeare Quote T-Shirt</p>
+                <a href="#" class="btn btn-primary">$23.99</a>
+                </div>
+            </div>
+            </div>
+            <div class="col-md-4">
+            <div class="card" style="width: 18rem">
+                <img
+                class="card-img-top"
+                img src="https://i.ibb.co/yN4wCZg/tank-top-mockup-of-a-brunette-having-a-healthy-meal-32775.png" alt="tank-top-mockup-of-a-brunette-having-a-healthy-meal-32775"
+                alt="list item 4"
+                />
+                <div class="card-body">
+                <p class="card-text">Yogaholic Tank-Tops</p>
+                <a href="#" class="btn btn-primary">$21.99</a>
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+  </body>
+  <footer class="footer">
+    <div class="findus">
+      <span class="title mr20"><b>#find</b>us</span>
+      <a href="https://www.facebook.com/ladyyogaclothingco" target="_blank" class="mr20">
+        <img src="https://www.e-chords.com/images/findus-facebook.png" alt="Facebook">
+      </a>
+      <a href="https://www.instagram.com/ladyyogaclothingco/" target="_blank" class="mr20">
+        <img src="https://www.e-chords.com/images/findus-instagram.png" alt="Instagram">
+      </a>
+      <a href="#" class="payment">
+          <img src="https://www.e-chords.com/images/ico-pay-with-paypal.png" alt="Pay with PayPal" class="mr20">
+          <img src="https://www.e-chords.com/images/credit-cards.png" alt="Credit cards accepted">
+      </a>
+    </div>
+    <code>All Rights Reserved 2010-2020</code>
+    <address>
+      <a class="footer__link--active" href="https://teespring.com/stores/lady-yoga-clothing-co"
+        >OUR ONLINE STORE</a
+      >
+    </address>
+    <button class="button button--state-success" href="#">
+      SUSCRIBE
+    </button>  
+  </footer>
 </html>
 

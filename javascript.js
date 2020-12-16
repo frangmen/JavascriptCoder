@@ -1,4 +1,4 @@
-  let nombre = prompt("Ingrese su primer nombre");
+/*   let nombre = prompt("Ingrese su primer nombre");
 let apellido = prompt("Ingrese su Apellido");
 let edad = parseInt(prompt("Ingrese su Edad"));  
   const suma = edad + 30;  
@@ -7,7 +7,7 @@ let Mes = "02";
 let Anio = "1989";
 const Cumpleanos = Dia + "/" + Mes + "/" + Anio; 
 let dias = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"];
-
+ */
 /* alert("Gracias por visitarnos " + nombre + " " + apellido); */
 /* 
 function saludar(nombre, apellido) {
@@ -26,7 +26,7 @@ let result = confirm("Estas seguro que quieres ingresar?");
 console.log(result);
  */
 
-for (let i=0; i < dias.length; i++) {
+/* for (let i=0; i < dias.length; i++) {
   if (i == 6)
   alert("Hola " + nombre + " " + apellido + " el domingo es el dia de descanso")
 
@@ -59,3 +59,45 @@ alert("Hola, estas trabajando demasiado, te recomiendo que descanses")
 
 else if(promedio < 10)
 alert("Estas trabajando poco, puedes trabajar un poco mas")
+
+ */
+
+
+
+function producto(nombre, tamano, precio, cantidad) {
+  this.nombre = nombre;
+  this.tamano = tamano;
+  this.precio = precio;
+  this.cantidad = cantidad;
+  this.mostrarInfo = function () {
+    console.log(`Este producto es: ${this.nombre} y cuesta: ${this.precio}`)
+  }
+  
+
+}
+
+const producto1 = new producto("Pink Namaste", 2, 19.99, 1);
+const producto2 = new producto("Musculosa Blanca", 3, 22.99, 1);
+const producto3 = new producto("Remera Balanca", 2, 22.99, 1);
+const producto4 = new producto("Buzo Yogi", 2, 42.99, 1);
+const producto5 = new producto("Musculosa Shakespeare", 2, 23.99, 1);
+const producto6 = new producto("Musculosa Namaste", 2, 21.99, 1);
+
+
+
+
+console.log(producto1);
+console.log(producto2);
+console.log(producto3);
+console.log(producto4);
+console.log(producto5);
+console.log(producto6);
+
+
+
+producto1.mostrarInfo();
+producto2.mostrarInfo();
+producto3.mostrarInfo();
+producto4.mostrarInfo();
+producto5.mostrarInfo();
+producto6.mostrarInfo();

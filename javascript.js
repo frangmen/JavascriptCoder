@@ -83,9 +83,6 @@ const producto4 = new producto("Buzo Yogi", 2, 42.99, 1);
 const producto5 = new producto("Musculosa Shakespeare", 2, 23.99, 1);
 const producto6 = new producto("Musculosa Namaste", 2, 21.99, 1);
 
-
-
-
 console.log(producto1);
 console.log(producto2);
 console.log(producto3);
@@ -101,3 +98,5 @@ producto3.mostrarInfo();
 producto4.mostrarInfo();
 producto5.mostrarInfo();
 producto6.mostrarInfo();
+
+

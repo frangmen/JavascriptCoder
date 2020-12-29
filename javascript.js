@@ -91,7 +91,7 @@ carrito.push(producto4);
 carrito.push(producto5);
 carrito.push(producto6);
 
-console.table(carrito)
+/* console.table(carrito) */
 /* console.log(producto1);
 console.log(producto2);
 console.log(producto3);
@@ -105,22 +105,22 @@ console.table(Productos);
 console.log(Productos.length);
 console.log(Productos[2]);
 
-
+/* 
 const nombreProducto = prompt("Ingrese el nombre del producto");
 const talleArticulo = Number(prompt("Ingrese el talle eligido"));
 const precioArticulo = Number(prompt("Ingrese el precio del producto"));
 const cantidadArticulos = Number(prompt("Ingrese el numero de unidades que desearia comprar"));
-
+ */
 // LOS PROMPT DE ARRIBA SON SOLO PARA EL EJERCICIO, PARA AGREGAR UN OBJETO AL ARRAY DESDE UN PROMPT
 
 // 
 
-const productoUsuario = new producto(nombreProducto, talleArticulo, precioArticulo, cantidadArticulos);
+/* const productoUsuario = new producto(nombreProducto, talleArticulo, precioArticulo, cantidadArticulos);
 carrito.unshift(productoUsuario);
 console.table(carrito);
 console.log(Productos.length);
 console.log(Productos[0]);
-
+ */
 // FILTRANDO LOS RESULTADOS 
 
 const resultadoFilter = carrito.filter(prop => prop.precio == 22.99);
@@ -133,4 +133,26 @@ producto4.mostrarInfo();
 producto5.mostrarInfo();
 producto6.mostrarInfo(); */
 
+let elemento = document.createElement('h2');
+elemento.textContent = ' NEW ARRIVALS ';
+elemento.className = 'pruebas';
+const divContenido = document.getElementsByClassName('.subtitulo');
+// let contenido = document.textContent( " NEW ARRIVALS ")
+document.body.appendChild(elemento);
+elemento.style.color= "green";
+elemento.style.backgroundColor = "yellow";
+elemento.style.textAlign = "center";
 
+
+
+divContenido.textContent = "SOY SOLO UN DIVISOR DE PRUEBA";
+
+console.log(divContenido);
+console.log(elemento.textContent);
+
+// Agarrando Elementos por Clase
+
+let p = document.getElementsByTagName('p');
+console.log(p);
+
+console.log(elemento)

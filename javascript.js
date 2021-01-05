@@ -160,12 +160,12 @@ console.log(elemento)
 
 
 function buenaBusqueda() {
-  alert("Gracias por buscar");
+  alert("Estamos trabajando para que funcione la pagina, gracias por tu paciencia");
   console.log(event);
 }
 
 function capturarEnter(e) {
   if (event.which == 13 || event.keyCode == 13) { 
-alert("Podrias haber clickeado pero presionaste la tecla Enter");        
+alert("Proximamente vas a poder buscar productos aqui por estilos");        
    }
 }

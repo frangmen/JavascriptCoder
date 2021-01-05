@@ -105,7 +105,7 @@ console.table(Productos);
 console.log(Productos.length);
 console.log(Productos[2]);
 
-
+/* 
 const nombreProducto = prompt("Ingrese el nombre del producto");
 const talleArticulo = Number(prompt("Ingrese el talle eligido"));
 const precioArticulo = Number(prompt("Ingrese el precio del producto"));
@@ -120,7 +120,7 @@ carrito.unshift(productoUsuario);
 console.table(carrito);
 console.log(Productos.length);
 console.log(Productos[0]);
-
+ */
 // FILTRANDO LOS RESULTADOS 
 /* 
 const resultadoFilter = carrito.filter(prop => prop.precio == 22.99);
@@ -169,3 +169,14 @@ function capturarEnter(e) {
 alert("Proximamente vas a poder buscar productos aqui por estilos");        
    }
 }
+
+function bigImg(x) {
+  x.style.height = "264px";
+  x.style.width = "264px";
+}
+
+function normalImg(x) {
+  x.style.height = "132px";
+  x.style.width = "132px";
+}
+

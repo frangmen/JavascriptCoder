@@ -105,26 +105,26 @@ console.table(Productos);
 console.log(Productos.length);
 console.log(Productos[2]);
 
-/* 
+
 const nombreProducto = prompt("Ingrese el nombre del producto");
 const talleArticulo = Number(prompt("Ingrese el talle eligido"));
 const precioArticulo = Number(prompt("Ingrese el precio del producto"));
 const cantidadArticulos = Number(prompt("Ingrese el numero de unidades que desearia comprar"));
- */
+
 // LOS PROMPT DE ARRIBA SON SOLO PARA EL EJERCICIO, PARA AGREGAR UN OBJETO AL ARRAY DESDE UN PROMPT
 
 // 
 
-/* const productoUsuario = new producto(nombreProducto, talleArticulo, precioArticulo, cantidadArticulos);
+ const productoUsuario = new producto(nombreProducto, talleArticulo, precioArticulo, cantidadArticulos);
 carrito.unshift(productoUsuario);
 console.table(carrito);
 console.log(Productos.length);
 console.log(Productos[0]);
- */
-// FILTRANDO LOS RESULTADOS 
 
+// FILTRANDO LOS RESULTADOS 
+/* 
 const resultadoFilter = carrito.filter(prop => prop.precio == 22.99);
-console.log(resultadoFilter);
+console.log(resultadoFilter); */
 
 /* producto1.mostrarInfo();
 producto2.mostrarInfo();
@@ -142,13 +142,14 @@ document.body.appendChild(elemento);
 elemento.style.color= "green";
 elemento.style.backgroundColor = "yellow";
 elemento.style.textAlign = "center";
+elemento.style.overflow = "hidden";
 
 
-
+/* 
 divContenido.textContent = "SOY SOLO UN DIVISOR DE PRUEBA";
 
 console.log(divContenido);
-console.log(elemento.textContent);
+console.log(elemento.textContent); */
 
 // Agarrando Elementos por Clase
 
@@ -156,3 +157,15 @@ let p = document.getElementsByTagName('p');
 console.log(p);
 
 console.log(elemento)
+
+
+function buenaBusqueda() {
+  alert("Gracias por buscar");
+  console.log(event);
+}
+
+function capturarEnter(e) {
+  if (event.which == 13 || event.keyCode == 13) { 
+alert("Podrias haber clickeado pero presionaste la tecla Enter");        
+   }
+}

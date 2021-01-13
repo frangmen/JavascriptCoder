@@ -30,13 +30,45 @@
     <title>Primera Pagina Con JavaScript</title>
   </head>
   <body>
-    <script src="javascript.js"></script>
+   
     <header>
         <div id="headerOferta">
         <p id="promoTop">
             ⚡💳 UP TO 50% OFF + 12 no interest monthly payments 💳⚡
         </p>
         </div>
+
+        <div class="container1">
+          <div class="row1">
+            <div class="four columns">
+              <h2></h2>
+            </div>
+            <div class="two columns u-pull-right">
+              <ul>
+                <li class="submenu">
+                  <img id="img-carrito" style= width:80px src="carrito.png" >
+                  <div id="carrito">
+                    <table id="lista-carrito" class="u-full-width">
+                      <thead>
+                        <tr>
+                          <th>Image</th>
+                          <th>Name</th>
+                          <th>Prize</th>
+                          <th>Quantity</th>
+                          <th></th>
+                        </tr>
+                      </thead>
+                      <tbody></tbody>
+                    </table>
+    
+                    <a href="#" id="vaciar-carrito" class="button u-full-width">Clear Cart</a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
 
         <div class="container">
         <div class="topnav">
@@ -130,7 +162,7 @@
         </a>
     </div>
 
-    <div class="container">
+    <div id= "lista-productos" class="container">
         <div class="card-deck" style="margin-left: 70px">
         <div class="row">
             <div class="col-md-4">
@@ -142,7 +174,7 @@
                 />
                 <div class="card-body">
                 <p class="card-text">Pink Namaste Tank-Tops</p>
-                <a href="#" class="btn btn-primary">$19.99</a>
+                <a href="#" class="btn btn-primary" data-id="1">$19.99</a>
                 </div>
             </div>
             </div>
@@ -155,7 +187,7 @@
                 />
                 <div class="card-body">
                 <p class="card-text">White Womens Tank-Top</p>
-                <a href="#" class="btn btn-primary">$22.99</a>
+                <a href="#" class="btn btn-primary" data-id="2">$22.99</a>
                 </div>
             </div>
             </div>
@@ -167,7 +199,7 @@
                 
                 <div class="card-body">
                 <p class="card-text">Strive For Balance T-Shirts</p>
-                <a href="#" class="btn btn-primary">$22.99</a>
+                <a href="#" class="btn btn-primary"data-id="3">$22.99</a>
                 </div>
             </div>
             </div>
@@ -184,7 +216,7 @@
                 <p class="card-text">
                     Let´s Get Yogi Hoodies
                 </p>
-                <a href="#" class="btn btn-primary">$42.99</a>
+                <a href="#" class="btn btn-primary"data-id="4">$42.99</a>
                 </div>
             </div>
             </div>
@@ -197,7 +229,7 @@
                 />
                 <div class="card-body">
                 <p class="card-text">Pink Shakespeare Quote T-Shirt</p>
-                <a href="#" class="btn btn-primary">$23.99</a>
+                <a href="#" class="btn btn-primary"data-id="5">$23.99</a>
                 </div>
             </div>
             </div>
@@ -210,13 +242,14 @@
                 />
                 <div class="card-body">
                 <p class="card-text">Yogaholic Tank-Tops</p>
-                <a href="#" class="btn btn-primary">$21.99</a>
+                <a href="#" class="btn btn-primary"data-id="6">$21.99</a>
                 </div>
             </div>
             </div>
         </div>
         </div>
     </div>
+    <script src="javascript.js"></script>
   </body>
   <footer class="footer">
     <div class="findus">

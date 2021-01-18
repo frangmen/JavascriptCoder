@@ -76,21 +76,21 @@
 
 
             <h1 id="tituloPrincipal">Lady Yoga Clothing Co.</h1>
-            <form class="form-inline">
-            <input
-                id="input1"
+            <form id="formulario" class="form-inline">
+              <input
+                id="buscador"
                 class="form-control mr-md-2"
-                type="search"
+                type="text"
                 placeholder="Search"
-                aria-label="Search"
-                onkeypress="capturarEnter(event);"
-            />
+                aria-label="Search">
+              </input>
+              <div id="botonSearch">
+                  <button id="submit-buscador" class="btn btn-outline-success my-2 my-sm-0" type="submit">
+                      Go
+                  </button>
+              </div>
             </form>
-            <div id="botonSearch">
-            <button onclick="buenaBusqueda()" id="botonBusqueda" class="btn btn-outline-success my-2 my-sm-0" type="submit">
-                Go
-            </button>
-            </div>
+         
         </div>
         </div>
     </header>
@@ -252,6 +252,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.js"
     integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
     crossorigin="anonymous"></script>
+    <script src="stockProductos.js"></script>
     <script src="javascript.js"></script>
   </body>
   <footer class="footer">

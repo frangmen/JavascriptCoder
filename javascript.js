@@ -189,6 +189,7 @@ const carrito = document.querySelector("#carrito");
 const contenedorCarrito = document.querySelector("#lista-carrito tbody");
 const listaProductos = document.querySelector("#lista-productos");
 const btnVaciarCarrito = document.querySelector("#vaciar-carrito");
+const formulario = document.querySelector('#formulario');
 
 let articulosCarrito = [];
 
@@ -196,6 +197,7 @@ let articulosCarrito = [];
 listaProductos.addEventListener("click", agregarProducto);
 carrito.addEventListener("click", quitarProducto);
 btnVaciarCarrito.addEventListener("click", vaciarCarrito);
+formulario.addEventListener('submit', filtrarProductos);
 
 document.addEventListener("DOMContentLoaded", () => {
   articulosCarrito = JSON.parse(localStorage.getItem("carrito")) || [];
@@ -204,6 +206,50 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // FUNCIONES
+
+function filtrarProductos(e) {
+	e.preventDefault();
+
+	const busqueda = document.querySelector('#buscador').value;
+
+	/* Busco en mi "BD" de productos */
+	const resultado = stockProductos.filter(producto => producto.name.toLocaleLowerCase().includes(busqueda.toLocaleLowerCase()));
+
+	limpiarProductos();
+	resultado.forEach((producto, index) => {
+
+		const { image, name, prize, id } = producto;
+
+		const divCard = document.createElement('div');
+		divCard.classList.add('col-md-4');
+		divCard.innerHTML = `
+			<div class="card" style="width: 18rem">
+				<img src="${image}" class="card-img-top">
+				<div class="card-body">
+					<p class="card-text">${name}</p>
+					<a href="#" class="btn btn-primary" data-id=${id}>${prize}</a>
+				</div>
+			</div>
+		`
+
+
+
+		if (index % 3 === 0) {
+			const row = document.createElement('div');
+			row.classList.add('row');
+
+			listaProductos.appendChild(row);
+			row.appendChild(divCard);
+		} else {
+			const cantRows = document.querySelector('#lista-productos').children.length
+			const rows = document.querySelectorAll('#lista-productos .row');
+			const row = rows[cantRows - 1];
+			row.appendChild(divCard);
+		}
+	})
+
+}
+
 function vaciarCarrito() {
   limpiarCarrito();
   articulosCarrito = [];
@@ -215,7 +261,7 @@ function quitarProducto(e) {
     const productoId = e.target.getAttribute("data-id");
 
     articulosCarrito = articulosCarrito.filter(
-      producto => producto.id != productoId
+    producto => producto.id != productoId
     );
 
     insertarCarritoHTML();

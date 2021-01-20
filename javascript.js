@@ -195,28 +195,75 @@ let articulosCarrito = [];
 
 /* Listeners */
 listaProductos.addEventListener("click", agregarProducto);
-carrito.addEventListener("click", quitarProducto);
+//carrito.addEventListener("click", quitarProducto);
+$("#carrito").on("click", quitarProducto);
+
 btnVaciarCarrito.addEventListener("click", vaciarCarrito);
-formulario.addEventListener('submit', filtrarProductos);
+//$('#btnVaciarCarrito').on('click', vaciarCarrito);
+//formulario.addEventListener('submit', filtrarProductos);
+$('#formulario').on('submit', filtrarProductos);
 
 document.addEventListener("DOMContentLoaded", () => {
   articulosCarrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
   insertarCarritoHTML();
 });
+$(function () {
+	/* Este evento nunca se dispara */
+	document.addEventListener('DOMContentLoaded', () => {
+		console.log("DOMContentLoaded desde jQuery");
+	})
+
+	/* Agregando HTML */
+	// $('#lista-productos').html('<p>Borrando todos los productos</p>');
+
+	/* Insertar un elemento como primer hijo */
+	// $('#lista-productos').prepend('<p>Inserto texto con jQuery</p>')
+
+	/* Insertar antes de cierto elemento */
+	$("<p>Inserto texto con jQuery</p>").insertBefore($('#lista-productos .row:last-child'));
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+
+	/* Este evento si se desencadena */
+	// $(function () {
+	// 	console.log("Ready jQuery dentro de DOMContentLoaded")
+	// })
+
+	cargarListaProductos(stockProductos);
+
+	articulosCarrito = JSON.parse(localStorage.getItem('carrito')) || [];
+
+	// if(articulosCarrito === null) {
+	// 	articulosCarrito = []
+	// }
+	insertarCarritoHTML();
+});
 
 // FUNCIONES
 
+
+  
 function filtrarProductos(e) {
 	e.preventDefault();
 
-	const busqueda = document.querySelector('#buscador').value;
-
-	/* Busco en mi "BD" de productos */
+	//const busqueda = document.querySelector('#buscador').value;
+  const busqueda = $("#buscador").val();
 	const resultado = stockProductos.filter(producto => producto.name.toLocaleLowerCase().includes(busqueda.toLocaleLowerCase()));
 
-	limpiarProductos();
-	resultado.forEach((producto, index) => {
+  limpiarProductos();
+  cargarListaProductos(resultado);
+}
+function vaciarCarrito() {
+  limpiarCarrito();
+  articulosCarrito = [];
+  guardarStorage();
+  
+}
+
+  function cargarListaProductos(productos) {
+	productos.forEach((producto, index) => {
 
 		const { image, name, prize, id } = producto;
 
@@ -231,8 +278,6 @@ function filtrarProductos(e) {
 				</div>
 			</div>
 		`
-
-
 
 		if (index % 3 === 0) {
 			const row = document.createElement('div');
@@ -250,11 +295,6 @@ function filtrarProductos(e) {
 
 }
 
-function vaciarCarrito() {
-  limpiarCarrito();
-  articulosCarrito = [];
-  guardarStorage();
-}
 
 function quitarProducto(e) {
   if (e.target.classList.contains("borrar-producto")) {

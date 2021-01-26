@@ -204,28 +204,44 @@ btnVaciarCarrito.addEventListener("click", vaciarCarrito);
 
 $('#formulario').on('submit', filtrarProductos);
 //formulario.addEventListener('submit', filtrarProductos);
-$('#compra-realizada').on("click", confirmarCompra);
 
-function confirmarCompra(e) {
-  e.preventDefault();
-
-  if (e.target.classList.contains("button u-full-width")) {
+window.onload = () => {
+  $("#random-product").click(() => {
     $.ajax({
       url: 'productos.json',
-      success: function (data, status, xhr) {
-        stockProductos = data;
-        cargarListaProductos(data);
-        console.log(status)
-        console.log(xhr)
-      },
-      error: function (xhr, status, errorThrown) {
-        console.log(xhr)
-        console.log(status)
-        console.log(errorThrown)
-      } 
-    })
-}}
-    
+      dataType: 'json',
+      contentType: "application/json",
+      success: crearTarjeta,
+      
+  });
+})
+}
+
+function crearTarjeta(result) {
+  
+  const {image, name, prize, id} = result; 
+  const row = document.createElement("tr");
+    row.innerHTML = `
+			<td>
+				<img src="${image}" width=100>
+			</td>
+			<td>
+				${name}
+			</td>
+			<td>
+				${prize}
+			</td>
+			<td>
+				${id}
+			</td>
+			<td>
+				<a href="#" class="borrar-producto" data-id="${id}"> X </a>
+			</td>
+		`;
+
+    contenedorCarrito.appendChild(row);
+  };
+
 
 
 

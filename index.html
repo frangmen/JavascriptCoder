@@ -27,10 +27,14 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="grt-responsive-menu.css">
+
     <title>Primera Pagina Con JavaScript</title>
   </head>
   <body>
-   
+    
+    
+
     <header>
         <div id="headerOferta">
         <p id="promoTop">
@@ -38,6 +42,20 @@
         </p>
         </div>
 
+        <nav>
+          <button class="grt-mobile-button">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+          </button>
+          <ul class="grt-menu">
+            <li class="active"><a href="">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Contact</a></li>
+            
+            
+          </ul>
+        </nav>
         <div class="container1">
           <div class="row">
             <div class="four columns">
@@ -46,7 +64,7 @@
             <div class="two columns u-pull-right">
               <ul>
                 <li class="submenu">
-                  <img id="img-carrito" style= width:80px src="carrito.png" >
+                  <img id="img-carrito" style= width:60px src="carrito.png" >
                   <div id="carrito">
                     <table id="lista-carrito" class="u-full-width">
                       <thead>
@@ -62,6 +80,7 @@
                     </table>
     
                     <a href="#" id="vaciar-carrito" class="button u-full-width">Clear Cart</a>
+                    <a href="#" id="compra-realizada" class="button u-full-width">Finalizar Compra</a>
                   </div>
                 </li>
               </ul>
@@ -76,53 +95,13 @@
 
 
             <h1 id="tituloPrincipal">Lady Yoga Clothing Co.</h1>
-            <form id="formulario" class="form-inline">
-              <input
-                id="buscador"
-                class="form-control mr-md-2"
-                type="text"
-                placeholder="Search"
-                aria-label="Search">
-              </input>
-              <div id="botonSearch">
-                  <button id="submit-buscador" class="btn btn-outline-success my-2 my-sm-0" type="submit">
-                      Go
-                  </button>
-              </div>
-            </form>
-         
+            
         </div>
         </div>
     </header>
   
-    <nav role="navigation">
-        <div id="menuToggle">
-        <input type="checkbox" />
-        <span></span>
-        <span></span>
-        <span></span>
-        <ul id="menu">
-            <li><a href="index.html">Main Page</a></li>
-            <li><a href="views\t-shirts.html">T-shirts</a></li>
-            <li><a href="views\tank-tops.html">Tank-Tops</a></li>
-            <li><a href="views\hoodies.html">Hoodies</a></li>
-            <li><a href="views\contact.html">Contact</a></li>
-        </ul>
-        </div>
-    </nav>
-
-    <div>
-        <div class="container">
-        <ul id="listaIndex" class="nav nav-tabs">
-            <li><a href="index.html">Main Page</a></li>
-            <li><a href="views\t-shirts.html">T-shirts</a></li>
-            <li><a href="views\tank-tops.html">Tank-Tops</a></li>
-            <li><a href="views\hoodies.html">Hoodies</a></li>
-            <li><a href="views\contact.html">Contact</a></li>
-        </ul>
-        </div>
-    </div>
-
+  
+<!-- 
     <div id="demo" class="carousel slide" data-ride="carousel">
         <ul class="carousel-indicators">
         <li data-target="#demo" data-slide-to="0" class="active"></li>
@@ -161,9 +140,9 @@
         <span class="carousel-control-next-icon"></span>
         </a>
     </div>
-
+ -->
     <div id= "lista-productos" class="container">
-        <div class="card-deck" style="margin-left: 70px">
+        <!-- <div class="card-deck" style="margin-left: 70px">
         <div class="row">
             <div class="col-md-4">
             <div class="card" style="width: 18rem">
@@ -247,13 +226,15 @@
             </div>
             </div>
         </div>
-        </div>
+        </div> -->
     </div>  
     <script src="https://code.jquery.com/jquery-3.5.1.js"
     integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
     crossorigin="anonymous"></script>
-    <script src="stockProductos.js"></script>
+    <!-- <script src="stockProductos.js"></script> -->
     <script src="javascript.js"></script>
+    <script src="grt-responsive-menu.js"></script>
+
   </body>
   <footer class="footer">
     <div class="findus">

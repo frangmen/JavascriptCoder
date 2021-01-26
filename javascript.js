@@ -192,6 +192,7 @@ const btnVaciarCarrito = document.querySelector("#vaciar-carrito");
 const formulario = document.querySelector('#formulario');
 
 let articulosCarrito = [];
+let stockProductos;
 
 /* Listeners */
 listaProductos.addEventListener("click", agregarProducto);
@@ -200,46 +201,76 @@ $("#carrito").on("click", quitarProducto);
 
 btnVaciarCarrito.addEventListener("click", vaciarCarrito);
 //$('#btnVaciarCarrito').on('click', vaciarCarrito);
-//formulario.addEventListener('submit', filtrarProductos);
+
 $('#formulario').on('submit', filtrarProductos);
+//formulario.addEventListener('submit', filtrarProductos);
+$('#compra-realizada').on("click", confirmarCompra);
+
+function confirmarCompra(e) {
+  e.preventDefault();
+
+  if (e.target.classList.contains("button u-full-width")) {
+    $.ajax({
+      url: 'productos.json',
+      success: function (data, status, xhr) {
+        stockProductos = data;
+        cargarListaProductos(data);
+        console.log(status)
+        console.log(xhr)
+      },
+      error: function (xhr, status, errorThrown) {
+        console.log(xhr)
+        console.log(status)
+        console.log(errorThrown)
+      } 
+    })
+}}
+    
+
+
+
+$(function () {
+  document.addEventListener("DOMContentLoaded", () => {
+    ;
+
+  })
+
+  $("<h1>THIS MONTH´S TRENDS</h1>").css({"text-align": "center","background-color":"pink"}).insertBefore($('#lista-productos'));
+
+  });     
 
 document.addEventListener("DOMContentLoaded", () => {
+
+  console.log("antes de ajax")
+  $.ajax({
+		url: 'productos.json',
+		success: function (data, status, xhr) {
+      stockProductos = data;
+			cargarListaProductos(data);
+			console.log(status)
+			console.log(data)
+		},
+		error: function (xhr, status, errorThrown) {
+			console.log(xhr)
+			console.log(status)
+			console.log(errorThrown)
+		} 
+  });
+  console.log("despues de ajax")
+
   articulosCarrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
   insertarCarritoHTML();
-});
-$(function () {
-	/* Este evento nunca se dispara */
-	document.addEventListener('DOMContentLoaded', () => {
-		console.log("DOMContentLoaded desde jQuery");
+  /* $(".submenu").on({
+		'mouseover': function () {
+			$(".submenu #carrito").slideDown('slow');
+		},
+		'mouseleave': function () {
+			$(".submenu #carrito").slideUp('slow');
+		} */
 	})
+;
 
-	/* Agregando HTML */
-	// $('#lista-productos').html('<p>Borrando todos los productos</p>');
-
-	/* Insertar un elemento como primer hijo */
-	// $('#lista-productos').prepend('<p>Inserto texto con jQuery</p>')
-
-	/* Insertar antes de cierto elemento */
-	$("<p>Inserto texto con jQuery</p>").insertBefore($('#lista-productos .row:last-child'));
-});
-
-document.addEventListener('DOMContentLoaded', () => {
-
-	/* Este evento si se desencadena */
-	// $(function () {
-	// 	console.log("Ready jQuery dentro de DOMContentLoaded")
-	// })
-
-	cargarListaProductos(stockProductos);
-
-	articulosCarrito = JSON.parse(localStorage.getItem('carrito')) || [];
-
-	// if(articulosCarrito === null) {
-	// 	articulosCarrito = []
-	// }
-	insertarCarritoHTML();
-});
 
 // FUNCIONES
 

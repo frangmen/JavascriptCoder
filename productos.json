@@ -1,7 +1,7 @@
 [
 	{
 		"image": "https://i.ibb.co/8Bmpb4q/tank-top-mockup-of-a-young-woman-posing-by-crashing-waves-at-the-beach-26785.png",
-		"name": "P1nk Namaste Tank-Tops",
+		"name": "Pink Namaste Tank-Top",
         "prize": "$19.99",
 		"id": 1
 	},
@@ -13,13 +13,13 @@
 	},
 	{
 		"image": "https://i.ibb.co/tHNX8S2/t-shirt-mockup-of-a-woman-smiling-while-her-daughter-hugs-her-32654.png",
-		"name": "Strive For Balance T-Shirts",
+		"name": "Strive For Balance T-Shirt",
 		"prize": "$22.99",
 		"id": 3
 	},
 	{
 		"image": "https://i.ibb.co/Tbpxx2X/hoodie-mockup-of-a-happy-woman-walking-in-the-middle-of-the-highway-44485-r-el2.png",
-		"name": "Let´s Get Yogi Hoodies",
+		"name": "Let´s Get Yogi Hoodie",
 		"prize": "$42.99",
 		"id": 4
 	},
@@ -31,9 +31,44 @@
 	},
 	{
 		"image": "https://i.ibb.co/yN4wCZg/tank-top-mockup-of-a-brunette-having-a-healthy-meal-32775.png",
-		"name": "Yogaholic Tank-Tops",
+		"name": "Yogaholic Tank-Top",
 		"prize": "$21.99",
 		"id": 6
+	},
+	{
+		"image": "https://i.ibb.co/KhyZ3G3/pullover-hoodie-mockup-featuring-a-woman-with-sunglasses-m420.png",
+		"name": "Yogaholic Hoodie",
+		"prize": "$45.99",
+		"id": 7
+	},
+	{
+		"image": "https://i.ibb.co/wcFsGCV/mockup-of-a-woman-trying-out-a-hoodie-at-a-fitting-room-44397-r-el2.png",
+		"name": "Lets Get Yogi Design",
+		"prize": "$42.99",
+		"id": 8
+	},
+	{
+		"image": "https://i.ibb.co/KK4dF6H/tank-top-mockup-of-a-woman-posing-next-to-a-bike-38699-r-el2.png",
+		"name": "Yoga Heals the Soul Tank-Top",
+		"prize": "$22.99",
+		"id": 9
+	},
+	{
+		"image": "https://i.ibb.co/SyvFt1C/hoodie-mockup-featuring-a-woman-carrying-a-mat-44492-r-el2.png",
+		"name": "Lets get yogi Hoodie",
+		"prize": "$22.99",
+		"id": 10
+	},
+	{
+		"image": "https://i.ibb.co/Tbpxx2X/hoodie-mockup-of-a-happy-woman-walking-in-the-middle-of-the-highway-44485-r-el2.png",
+		"name": "Lets get Yogi Hoodie",
+		"prize": "$23.99",
+		"id": 11
+	},
+	{
+		"image": "https://i.ibb.co/Q8Fz9Bq/hoodie-mockup-of-a-serious-man-with-sunglasses-walking-on-the-street-2774-el1.png",
+		"name": "Heavily Meditated Hoodie",
+		"prize": "$42.99",
+		"id": 12
 	}
-	
 ]
